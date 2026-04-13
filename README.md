@@ -1,4 +1,6 @@
 # LLM-Based Question Answering (RAG on Databricks)
+<img width="1064" height="574" alt="image" src="https://github.com/user-attachments/assets/890615bc-15ac-415f-a52c-b602c9e87cbc" />
+
 
 ## What is this?
 
