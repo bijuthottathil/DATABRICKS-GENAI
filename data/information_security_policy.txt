@@ -1,0 +1,119 @@
+INFORMATION SECURITY POLICY
+Version: 5.0
+Effective Date: February 1, 2024
+Owner: Chief Information Security Officer (CISO)
+Applicability: All employees, contractors, and vendors
+
+1. INTRODUCTION
+
+Information is one of Acme Financial Services' most critical assets. This Information Security Policy establishes the minimum security requirements that must be met to protect information assets from unauthorized access, disclosure, alteration, and destruction. This policy applies to all information systems owned or operated by Acme, including cloud-hosted services, third-party platforms, and employee-owned devices used for corporate purposes.
+
+This policy is aligned with ISO/IEC 27001:2022, NIST Cybersecurity Framework 2.0, and applicable regulatory requirements including PCI DSS v4.0 and the FFIEC Cybersecurity Assessment Tool.
+
+2. INFORMATION SECURITY PRINCIPLES
+
+Acme's information security program is built on three foundational principles:
+
+Confidentiality: Information is accessible only to those authorized to access it. Controls are applied commensurate with the sensitivity of the data.
+
+Integrity: Information is accurate, complete, and protected from unauthorized modification. Changes to critical data are logged and auditable.
+
+Availability: Information systems and data are available to authorized users when needed. Resilience and recovery capabilities are maintained and regularly tested.
+
+3. ASSET MANAGEMENT
+
+3.1 Asset Inventory
+All information assets — including hardware, software, data, and cloud services — must be recorded in the Technology Asset Register. The register is owned by the IT Asset Management team and reviewed quarterly. Each asset must have an assigned owner responsible for its security and lifecycle management.
+
+3.2 Acceptable Use
+Corporate assets must be used primarily for business purposes. Incidental personal use is permitted provided it does not compromise security, consume significant resources, or violate other policies. Unacceptable uses include: accessing illegal content, installing unauthorized software, circumventing security controls, and any activity that could embarrass or harm the company.
+
+4. ACCESS CONTROL
+
+4.1 User Access Management
+Access to information systems is granted based on business need and approved by the relevant system owner. User accounts are provisioned through the Identity Management system. All user accounts must be tied to a named individual; shared accounts are prohibited except for approved service accounts.
+
+4.2 Authentication Standards
+- All user accounts must use passwords of at least 14 characters, combining uppercase, lowercase, numbers, and symbols.
+- Passwords must not be reused within the last 12 cycles.
+- Multi-factor authentication (MFA) is mandatory for: all remote access, all privileged accounts, all cloud management consoles, and all customer-facing applications handling financial transactions.
+- Single sign-on (SSO) is the preferred authentication method for internal applications.
+
+4.3 Privileged Access
+Privileged accounts (system administrators, database administrators, network engineers) must be managed through the Privileged Access Management (PAM) system. Privileged sessions must be recorded. Standing privileged access must be minimized; just-in-time (JIT) access is the target operating model. Privileged accounts must not be used for routine non-administrative tasks.
+
+4.4 Access Reviews
+- Standard user access: reviewed semi-annually by line managers.
+- Privileged access: reviewed quarterly by IT Security.
+- Third-party access: reviewed upon contract renewal or annually, whichever is sooner.
+- Dormant accounts (no login for 60 days) are automatically disabled.
+
+5. CRYPTOGRAPHY
+
+5.1 Encryption Standards
+- Data at rest: AES-256 for all Level 3 and Level 4 data.
+- Data in transit: TLS 1.2 minimum; TLS 1.3 preferred. SSL and TLS 1.0/1.1 are prohibited.
+- Encryption keys must be managed through a dedicated Key Management System (KMS). Keys must be rotated annually for data at rest and immediately upon suspected compromise.
+- Cryptographic algorithms must be approved by the IT Security team. MD5, SHA-1, DES, and 3DES are prohibited.
+
+6. PHYSICAL AND ENVIRONMENTAL SECURITY
+
+6.1 Data Centers
+Access to data center facilities is restricted to authorized personnel and logged electronically. Visitors must be escorted at all times. Environmental controls (temperature, humidity, fire suppression, UPS) must be maintained and tested quarterly. CCTV coverage must be maintained for all entry/exit points with 90-day retention.
+
+6.2 Clear Desk and Screen
+Employees must not leave sensitive documents unattended on their desks. Screens must be locked when leaving a workstation (Windows + L / Cmd + Ctrl + Q). Physical documents containing Level 3 or Level 4 data must be stored in locked cabinets when not in use.
+
+7. NETWORK SECURITY
+
+7.1 Network Segmentation
+Production, development, and corporate networks must be logically separated. The cardholder data environment (CDE) must be isolated using firewalls and network access control lists. Flat networks with unrestricted lateral movement are prohibited in production environments.
+
+7.2 Firewall and Perimeter
+All external-facing systems must sit behind enterprise-grade firewalls. Firewall rule sets are reviewed quarterly. Default-deny rules apply; all permitted traffic must be explicitly approved. Remote access must be through the corporate VPN or approved Zero Trust Network Access (ZTNA) solution.
+
+7.3 Wireless Security
+Corporate wireless networks must use WPA3 or WPA2-Enterprise. Guest wireless must be isolated from the corporate network. Rogue access point detection must be enabled on all corporate campuses.
+
+8. VULNERABILITY MANAGEMENT
+
+8.1 Patching
+Critical and high severity patches must be applied within 14 days of release for internet-facing systems and within 30 days for internal systems. Medium severity patches must be applied within 90 days. Emergency patches addressing actively exploited vulnerabilities must be applied within 48 hours.
+
+8.2 Vulnerability Scanning
+Internal vulnerability scans must be conducted weekly. External scans (including PCI ASV scans) must be conducted quarterly. Scan results are reviewed by IT Security and remediation is tracked to closure. Accepted risks require CISO approval.
+
+8.3 Penetration Testing
+External penetration tests must be conducted annually by a qualified third party. Internal penetration tests (red team exercises) are conducted bi-annually. Scope must include web applications, network infrastructure, and social engineering. Findings are classified and remediated per the vulnerability severity SLAs above.
+
+9. SECURITY MONITORING AND LOGGING
+
+9.1 Log Management
+Security-relevant events must be logged on all critical systems, including authentication events, privilege escalations, configuration changes, and data access. Logs must be stored in a centralized SIEM for a minimum of 12 months, with 90 days immediately searchable. Log integrity must be protected; logs must be tamper-evident.
+
+9.2 Security Operations Center (SOC)
+The SOC monitors security alerts 24x7x365. Mean Time to Detect (MTTD) target: under 1 hour for Severity 1 alerts. Mean Time to Respond (MTTR) target: under 4 hours for Severity 1 alerts. The SOC escalates unresolved high-severity incidents to the CISO within 2 hours.
+
+10. SECURITY AWARENESS AND TRAINING
+
+All employees must complete security awareness training within 30 days of joining and annually thereafter. Phishing simulation exercises are conducted quarterly; click rates and reporting rates are tracked and reported to the DGC. Technical staff (developers, system administrators) must complete role-specific security training annually covering secure coding practices, cloud security, and threat modeling.
+
+11. SUPPLIER AND THIRD-PARTY SECURITY
+
+Third-party suppliers with access to Acme systems or data are subject to the Third-Party Risk Management Policy. Security requirements are included in all supplier contracts. IT Security conducts due diligence assessments before onboarding suppliers and monitors their security posture on an ongoing basis using threat intelligence feeds and continuous monitoring tools.
+
+12. BUSINESS CONTINUITY AND DISASTER RECOVERY
+
+12.1 Recovery Objectives
+- Recovery Time Objective (RTO): Critical systems must be recoverable within 4 hours.
+- Recovery Point Objective (RPO): Maximum data loss of 1 hour for critical systems.
+
+12.2 Testing
+Business continuity plans must be tested annually. Disaster recovery tests (including failover to secondary sites) must be conducted semi-annually. Test results and lessons learned are documented and presented to the Executive Leadership Team.
+
+13. POLICY EXCEPTIONS
+
+Exceptions to this policy require written approval from the CISO. Requests must document the business justification, the specific control being excepted, compensating controls in place, and the duration of the exception. Exceptions are reviewed quarterly and must be renewed annually.
+
+Contact: security@acmefinancial.example.com
+Security Hotline (24/7): +1-800-555-0199

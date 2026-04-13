@@ -1,0 +1,103 @@
+EMPLOYEE HANDBOOK — INFORMATION TECHNOLOGY AND SECURITY GUIDELINES
+Section 7: Technology Use and Security
+Last Updated: January 2024
+
+INTRODUCTION
+
+Technology is central to how we work at Acme Financial Services. This section of the Employee Handbook explains your responsibilities when using company-provided technology and handling company information. Following these guidelines protects you, your colleagues, our clients, and the company. Violations of these guidelines may result in disciplinary action.
+
+7.1 YOUR DEVICES AND ACCOUNTS
+
+Company-Provided Devices
+Your laptop, desktop, and mobile device are provided for business use. You are responsible for keeping them physically secure — do not leave them unattended in public spaces. Report a lost or stolen device to IT Security immediately by calling the 24/7 hotline at +1-800-555-0199. Devices must not be lent to family members or friends, even briefly.
+
+Passwords and Authentication
+You will be issued an account with a temporary password on your first day. You must change this password immediately and set up multi-factor authentication (MFA). Your password must be at least 14 characters long and combine letters, numbers, and symbols. Never share your password with anyone — not your manager, not IT Support, not a colleague. IT will never ask for your password. If you suspect your account has been compromised, contact IT Security immediately.
+
+Screen Lock
+Lock your screen every time you step away from your computer, even for a moment. Use Windows + L on Windows or Cmd + Ctrl + Q on Mac. Your screen will auto-lock after 10 minutes of inactivity, but do not rely on this.
+
+7.2 EMAIL AND COMMUNICATIONS
+
+Phishing Awareness
+Phishing emails are one of the most common ways attackers gain access to company systems. Warning signs include: unexpected requests for credentials or payment, urgency or threats ("your account will be suspended"), mismatched sender addresses, and links that hover to unfamiliar domains. When in doubt, do not click. Forward suspicious emails to phishing@acmefinancial.example.com. We conduct regular phishing simulations — treat every suspicious message as potentially real.
+
+Email Confidentiality
+Do not send confidential or sensitive information to personal email accounts. Encrypt email attachments containing Level 3 or Level 4 data before sending externally. Be careful about Reply All — check who is on the thread before sending.
+
+7.3 INTERNET AND SOFTWARE USE
+
+Approved Software Only
+Install only software that appears on the IT-Approved Software List, accessible on the intranet. If you need software for a legitimate business purpose that is not on the list, submit a request through the IT portal. Do not install browser extensions without IT approval.
+
+Web Browsing
+Avoid visiting websites unrelated to work on company devices. Content filtering is in place; attempts to access blocked categories are logged. Downloading software, media, or files from untrusted websites is prohibited.
+
+Cloud Storage
+Use only company-approved cloud storage solutions (currently: Microsoft OneDrive and SharePoint). Do not store company data on personal cloud accounts (personal Google Drive, Dropbox, iCloud, etc.). Sensitive data must not be shared via public links; use access-restricted sharing with named individuals only.
+
+7.4 REMOTE WORKING
+
+When working outside the office, you must:
+- Connect to the corporate VPN before accessing any internal systems.
+- Use a private, secured Wi-Fi network. Avoid public Wi-Fi; if unavoidable, always use the VPN.
+- Keep your screen positioned so that it cannot be viewed by others in public.
+- Use a privacy screen when working in public locations if you handle sensitive data.
+- Never work on confidential matters in a setting where you could be overheard.
+
+If you are traveling internationally, notify IT Security in advance. Travel to countries on the High Risk list requires special procedures including the use of a loaner device.
+
+7.5 HANDLING SENSITIVE INFORMATION
+
+Know the Classification
+Before handling any data, know its classification: Public, Internal, Confidential, or Restricted. When in doubt, treat data as Confidential until confirmed otherwise. Refer to the Data Classification Policy for full definitions.
+
+Physical Documents
+Print sensitive documents only when necessary. Retrieve printed documents promptly from the printer. Use the cross-cut shredder bins (located near printers on every floor) to dispose of printed sensitive material. Do not dispose of sensitive printed material in regular recycling or waste bins.
+
+Clear Desk
+Keep your desk clear of sensitive documents when you are away. Lock drawers containing sensitive materials at the end of each working day.
+
+7.6 REPORTING SECURITY INCIDENTS
+
+If you notice any of the following, report it immediately to IT Security (+1-800-555-0199 or security@acmefinancial.example.com):
+- A device that is lost, stolen, or behaving unexpectedly.
+- An email you believe is a phishing attempt.
+- A login attempt you did not initiate (check MFA notifications).
+- An unfamiliar person in a restricted area of the office.
+- Files that appear to have been accessed or changed without your knowledge.
+- A colleague asking you to bypass security controls.
+
+There is no penalty for reporting in good faith. We would rather investigate a false alarm than miss a real incident. Early reporting limits damage and protects the company and our clients.
+
+7.7 ARTIFICIAL INTELLIGENCE TOOLS
+
+AI tools — including chatbots and writing assistants — are powerful but must be used carefully.
+
+What you may do:
+- Use approved AI tools (listed on the intranet under "AI Tools") for drafting internal communications, summarizing public documents, brainstorming, and coding assistance in sandbox environments.
+
+What you must not do:
+- Enter any customer data, personal information, client account details, or proprietary business information into AI tools.
+- Use AI-generated content in regulatory filings, legal documents, or client communications without a human review.
+- Use AI tools not on the approved list for any work purpose.
+
+If you are unsure whether a use case is permitted, ask your manager or the Compliance team before proceeding. Mistakes with AI tools can lead to data breaches and regulatory consequences.
+
+7.8 SOCIAL MEDIA
+
+Do not discuss confidential business matters, client information, financial results, or internal security incidents on social media. When posting about your work on professional networks like LinkedIn, avoid sharing information that could be used by attackers to map our systems, processes, or organizational structure (e.g., specific technology platforms we use, names of security products, internal project names). Do not represent personal views as official company positions.
+
+7.9 CONSEQUENCES OF POLICY VIOLATIONS
+
+Violations of these guidelines are taken seriously. Depending on severity, consequences may include:
+- Informal counseling for minor first-time violations.
+- Written warning for repeated or moderate violations.
+- Suspension without pay for serious violations.
+- Termination of employment for severe violations (e.g., intentional data theft, sharing credentials, deliberate circumvention of security controls).
+- Legal action and regulatory reporting where required by law.
+
+If you are unsure about any aspect of these guidelines, ask your manager or contact HR or the IT Security team. We are here to help you work securely.
+
+IT Security Help Desk: it-support@acmefinancial.example.com | +1-800-555-0100
+Security Incidents (24/7): security@acmefinancial.example.com | +1-800-555-0199

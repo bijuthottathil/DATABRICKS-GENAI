@@ -1,0 +1,104 @@
+DATA GOVERNANCE POLICY
+Version: 3.1
+Last Reviewed: December 2023
+Next Review: December 2024
+Owner: Chief Data Officer
+
+1. PURPOSE AND SCOPE
+
+This policy establishes the framework for managing data as a strategic asset across Acme Financial Services. It applies to all data created, collected, stored, processed, or transmitted by Acme, its subsidiaries, and any third parties acting on its behalf. The goal is to ensure data is accurate, available, secure, and used ethically and in compliance with applicable laws and regulations.
+
+2. DATA GOVERNANCE STRUCTURE
+
+2.1 Data Governance Committee
+The Data Governance Committee (DGC) is the primary decision-making body for enterprise data policy. The DGC is chaired by the Chief Data Officer (CDO) and includes representatives from Finance, Risk, Technology, Legal, Compliance, and each major business unit. The DGC meets monthly and reports to the Executive Leadership Team quarterly.
+
+2.2 Data Owners
+Each data domain is assigned a Data Owner, typically a senior business leader. Data Owners are accountable for:
+- Approving the classification of data assets within their domain.
+- Authorizing access to data and reviewing access rights quarterly.
+- Ensuring data quality standards are met.
+- Resolving data disputes within their domain.
+
+2.3 Data Stewards
+Data Stewards are operational staff assigned by Data Owners to manage day-to-day data quality, metadata, and lineage within a domain. They serve as the primary point of contact for data-related issues and collaborate with the Data Governance team on cataloguing and documentation.
+
+2.4 Data Consumers
+Data Consumers include any employee, system, or third party that accesses or uses data. Consumers must use data only for authorized purposes, handle data according to its classification, and report data quality issues to the relevant Data Steward.
+
+3. DATA QUALITY
+
+3.1 Quality Dimensions
+Data quality is assessed along six dimensions:
+- Completeness: Required fields are populated.
+- Accuracy: Data values correctly represent the real-world entity or event.
+- Consistency: Data is consistent across systems and time periods.
+- Timeliness: Data is available when needed and reflects the current state.
+- Uniqueness: No unintended duplicates exist.
+- Validity: Data conforms to defined formats, ranges, and business rules.
+
+3.2 Quality Thresholds
+Critical data elements (CDEs) — those used in regulatory reporting, risk calculations, or customer-facing decisions — must meet a minimum quality score of 95% across all six dimensions. Data below this threshold must be flagged in the data catalog and a remediation plan submitted to the DGC within 30 days.
+
+3.3 Data Profiling
+All new data sources onboarded to the enterprise data platform must undergo profiling before use in production analytics or reporting. Profiling results must be documented in the data catalog. Existing sources are profiled quarterly by the Data Engineering team.
+
+4. METADATA MANAGEMENT
+
+A centralized data catalog must be maintained for all enterprise data assets. Each asset entry must include:
+- Asset name and description
+- Data Owner and Steward
+- Classification level (per the Data Classification Policy)
+- Source system and ingestion method
+- Data lineage (upstream and downstream dependencies)
+- Retention period and disposal method
+- Date of last quality assessment
+
+The data catalog is reviewed and updated by Data Stewards on a monthly basis. The CDO publishes an annual Data Asset Inventory to the DGC.
+
+5. DATA LINEAGE
+
+Data lineage tracking is mandatory for all data used in regulatory reporting, financial statements, and AI/ML model training. Lineage must capture the full path from source to consumption, including all transformations. Lineage documentation must be updated within 5 business days of any pipeline change. Automated lineage tools are preferred; manual documentation requires DGC approval.
+
+6. DATA ACCESS AND SHARING
+
+6.1 Internal Access
+Access to data is granted on the principle of least privilege. Requests for access must be submitted through the access management portal and approved by the relevant Data Owner. Access is reviewed quarterly; unused access is revoked automatically after 90 days of inactivity.
+
+6.2 Cross-Border Data Transfers
+Transfers of personal data outside the European Economic Area (EEA) must comply with GDPR Chapter V. Approved transfer mechanisms include Standard Contractual Clauses (SCCs) and Binding Corporate Rules (BCRs). All cross-border transfers must be documented in the Records of Processing Activities (RoPA).
+
+6.3 Data Sharing with Third Parties
+Data may only be shared with third parties under a signed Data Sharing Agreement (DSA) or Data Processing Agreement (DPA) that specifies permitted uses, security requirements, and data subject rights obligations. The Data Governance team must be notified of all new external data sharing arrangements before they commence.
+
+7. DATA LIFECYCLE MANAGEMENT
+
+7.1 Creation and Collection
+Data must be collected only for specified, explicit, and legitimate purposes. Collection of data beyond what is necessary for the stated purpose (data minimization) is prohibited.
+
+7.2 Storage
+Data must be stored in approved systems listed in the Technology Asset Register. Shadow IT data stores (unauthorized spreadsheets, personal cloud storage, USB drives) are not permitted for Level 3 or Level 4 data. All Level 4 data must be encrypted at rest using AES-256 or equivalent.
+
+7.3 Archival and Disposal
+Data that has exceeded its retention period must be archived or disposed of per the Retention and Disposal Schedule. Disposal must be documented and records retained for audit purposes. Physical media must be destroyed by an approved vendor providing a Certificate of Destruction.
+
+8. MASTER DATA MANAGEMENT
+
+Master data — including customer, product, counterparty, and reference data — is governed by the Master Data Management (MDM) program. A single "golden record" is maintained for each master data entity. Discrepancies between source systems and the golden record must be resolved within the defined SLA (typically 48 hours for customer data). The MDM program publishes quality metrics to the DGC monthly.
+
+9. ANALYTICS AND AI GOVERNANCE
+
+9.1 Approved Data for Model Training
+AI and ML models may only be trained on data that has been approved by the Data Owner and classified appropriately. Training on production customer data requires written approval from the CDO and the Chief Privacy Officer. Synthetic or anonymized data is preferred for model development.
+
+9.2 Feature Stores
+Reusable data features for ML models must be registered in the enterprise Feature Store. Documentation must include the feature definition, data source, refresh frequency, and approved use cases.
+
+9.3 Data Drift Monitoring
+Production ML models must be monitored for data drift monthly. Significant drift (exceeding defined thresholds) must be escalated to the model owner and the Data Governance team within 5 business days.
+
+10. COMPLIANCE AND ENFORCEMENT
+
+Adherence to this policy is monitored by the Data Governance team through quarterly audits. Violations are classified as minor (process deviations without data impact), major (data quality failures affecting reporting or customers), or critical (regulatory breaches or data loss events). Critical violations are reported to the Board Risk Committee within 24 hours. Persistent non-compliance may result in disciplinary action up to and including termination.
+
+Contact: data.governance@acmefinancial.example.com

@@ -1,0 +1,88 @@
+POLICY UPDATE BULLETIN — Q1 2024
+Document Type: Policy Amendment Notice
+Issuing Authority: Office of the Chief Compliance Officer
+Distribution: All Staff
+Reference: POL-2024-001 through POL-2024-007
+
+SUMMARY OF KEY CHANGES
+
+This bulletin summarizes policy amendments effective for Q1 2024. All previous policy versions are superseded by the documents referenced herein. Staff are required to review and acknowledge these updates in the compliance portal by March 31, 2024.
+
+POL-2024-001: REMOTE WORK SECURITY POLICY (UPDATED)
+
+Key Changes:
+- VPN usage is now mandatory for all remote access to corporate systems, without exception. The previous exemption for read-only access to internal dashboards has been removed.
+- Personal devices (BYOD) used for corporate work must have endpoint protection software approved by the IT Security team installed and active. Unmanaged personal devices may no longer access corporate email or productivity tools directly; access must be through the approved virtual desktop infrastructure (VDI).
+- Employees working from public locations (cafes, airports, co-working spaces) must use privacy screens when handling sensitive or confidential data.
+- Any security incident occurring on a remote device must be reported to the IT Security helpdesk within 2 hours of discovery.
+
+Rationale: Following a Q4 2023 internal review, several gaps were identified in the enforcement of remote access controls. This update tightens requirements to align with NIST SP 800-46r2 and the updated PCI DSS v4.0 requirements for remote access.
+
+POL-2024-002: ACCEPTABLE USE POLICY FOR GENERATIVE AI TOOLS (NEW)
+
+This is a new policy governing employee use of generative AI tools such as large language models (LLMs), AI-assisted coding tools, and AI image generators.
+
+Permitted Uses:
+- Drafting and summarizing internal documents that do not contain personal data, trade secrets, or client information.
+- Generating code for prototyping in isolated, non-production environments, subject to security review before deployment.
+- Research and ideation tasks where no confidential information is shared with external systems.
+
+Prohibited Uses:
+- Entering customer names, account numbers, transaction histories, or any personally identifiable information (PII) into external AI tools.
+- Submitting proprietary source code, unreleased product plans, financial forecasts, or M&A-related information to external AI services.
+- Using AI-generated content in regulatory filings, legal documents, or client-facing communications without human review and sign-off.
+- Creating synthetic media (deepfakes) of any individual without their explicit written consent.
+
+Approved Internal Tools: A list of approved AI tools is maintained on the intranet under "IT-Approved Software." Staff must not use AI tools not on this list for any work-related purpose.
+
+POL-2024-003: DATA CLASSIFICATION POLICY (REVISED)
+
+The data classification tiers have been restructured from three levels to four:
+
+Level 1 — Public: Information intended for public disclosure (press releases, published reports, marketing materials).
+Level 2 — Internal: Information for internal use only, not sensitive if disclosed but not meant for public distribution.
+Level 3 — Confidential: Business-sensitive information including financial projections, personnel data, and client lists. Access on a need-to-know basis.
+Level 4 — Restricted: Highly sensitive information including customer PII, payment card data, health records, and merger/acquisition details. Strictest access controls apply; must be encrypted at rest and in transit; access logged and audited.
+
+All data assets must be classified by the data owner within 90 days of this policy's effective date. Classification labels must be applied to documents, databases, and cloud storage buckets. The Data Governance team will provide training and tooling support.
+
+POL-2024-004: THIRD-PARTY RISK MANAGEMENT POLICY (UPDATED)
+
+Key Changes:
+- Vendor tiering has been revised. Vendors with access to Level 3 or Level 4 data are automatically classified as "High Risk" and require annual security assessments regardless of contract value.
+- Vendors must now provide evidence of their own SOC 2 Type II report or equivalent certification. Self-attestation is no longer accepted for High Risk vendors.
+- Contracts with High Risk vendors must include a right-to-audit clause and a maximum 48-hour breach notification obligation to Acme.
+- Offboarding procedures for terminated vendors must be completed within 5 business days, including revocation of all access credentials and deletion/return of Acme data.
+
+POL-2024-005: INCIDENT RESPONSE PLAN (MAJOR REVISION)
+
+The Incident Response Plan has been substantially revised to align with the NIST Cybersecurity Framework 2.0 and updated regulatory notification timelines.
+
+Key Changes:
+- A new "Severity 0" category has been introduced for incidents with potential systemic impact (e.g., ransomware affecting core banking systems, supply chain compromise). Severity 0 incidents trigger immediate executive notification and crisis management protocols.
+- The initial triage window has been shortened from 4 hours to 2 hours for Severity 1 and above.
+- The Communications team must be notified of any Severity 1 or higher incident within 1 hour so that external communication protocols can be prepared.
+- Post-incident reviews are now required for all Severity 2 and above incidents (previously only Severity 1 and above).
+- The IRP must be tested twice per year (up from once); one test must be a live simulation (not just a tabletop exercise).
+
+POL-2024-006: MODEL RISK MANAGEMENT POLICY (NEW SECTION ADDED)
+
+A new section on Generative AI and Large Language Models has been added to the existing MRM Policy:
+
+- All LLMs deployed internally for customer-facing or decision-support purposes must undergo pre-deployment validation covering accuracy, hallucination rate, toxicity, and fairness.
+- LLMs must be evaluated against a documented set of adversarial prompts to assess robustness before deployment.
+- A human review checkpoint is mandatory for any AI-generated output that will be shared externally or used to support a regulatory submission.
+- LLM performance must be monitored in production on a monthly basis. Models showing accuracy degradation greater than 5% from baseline must be retrained or replaced within 60 days.
+
+POL-2024-007: TRAVEL SECURITY POLICY (UPDATED)
+
+Key Changes:
+- Employees traveling to countries designated as "High Risk" by the Corporate Security team must use loaner devices ("clean laptops") provided by IT. Personal laptops and phones may not be used for corporate work in High Risk destinations.
+- All devices must be inspected by IT Security upon return from High Risk destinations before reconnection to the corporate network.
+- International travel to sanctioned countries requires pre-approval from Legal and Compliance, regardless of the purpose of travel.
+
+ACKNOWLEDGEMENT REQUIRED
+
+All employees must log in to the Compliance Portal at compliance.acmefinancial.example.com and acknowledge receipt of this bulletin by March 31, 2024. Managers will receive weekly reports on acknowledgement rates within their teams.
+
+For questions, contact your Business Unit Compliance Officer or email compliance@acmefinancial.example.com.

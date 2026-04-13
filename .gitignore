@@ -1,0 +1,7 @@
+.env
+*.env
+ARTICLE_LinkedIn_Medium.md
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

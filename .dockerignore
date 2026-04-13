@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.py[cod]
+*.ipynb
+*.ipynb_checkpoints
+data/
+README.md
+app.yaml
+chain.py
+0*.py
+requirements.txt

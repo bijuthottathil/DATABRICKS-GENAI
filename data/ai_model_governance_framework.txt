@@ -1,0 +1,124 @@
+AI AND MACHINE LEARNING MODEL GOVERNANCE FRAMEWORK
+Version: 1.2
+Effective Date: March 2024
+Owner: AI Governance Committee
+Applicability: All teams developing, deploying, or procuring AI/ML systems
+
+1. PURPOSE
+
+This framework establishes governance standards for artificial intelligence and machine learning systems at Acme Financial Services. It is designed to ensure that AI systems are developed responsibly, perform reliably, are fair and explainable, comply with applicable regulations, and are subject to appropriate human oversight.
+
+2. SCOPE
+
+This framework applies to:
+- Machine learning models used in production for customer-facing decisions.
+- AI-powered automation affecting employee workflows or business processes.
+- Generative AI systems deployed internally or externally.
+- Third-party AI systems integrated into Acme products or services.
+- Experimental AI projects that may transition to production.
+
+2. AI RISK TIERS
+
+All AI systems must be classified into one of three risk tiers before development begins:
+
+Tier 1 — High Risk: Systems that make or materially influence consequential decisions affecting customers, such as loan approvals, fraud determinations, insurance underwriting, and customer risk scoring. These systems require the highest level of validation, oversight, and explainability.
+
+Tier 2 — Medium Risk: Systems that support internal decision-making, such as internal risk dashboards, employee performance analytics, and supply chain optimization. These systems require standard validation and periodic review.
+
+Tier 3 — Low Risk: Systems with minimal potential for harm, such as document summarization tools, internal chatbots for IT support, and data visualization enhancements. These require basic quality checks and user training.
+
+Tier classification is determined jointly by the AI Governance Committee and the Risk team at project inception and reviewed annually.
+
+3. MODEL LIFECYCLE GOVERNANCE
+
+3.1 Ideation and Business Case
+Before a model project begins, a Business Case and AI Impact Assessment must be submitted to the AI Governance Committee. The assessment must address: the problem being solved, the data to be used, foreseeable risks (including fairness, privacy, and security risks), intended users, and the decision-making process the model will support.
+
+3.2 Data Preparation
+Training data must be approved by the Data Owner and comply with the Data Governance Policy. Data used for Tier 1 models must be documented in the Feature Store and subject to lineage tracking. Personal data used for training must have a lawful basis under applicable privacy law. Synthetic data may be used to augment training sets; its generation methodology must be documented.
+
+3.3 Model Development
+Development must follow the team's established MLOps practices, including:
+- Experiment tracking (all model versions, hyperparameters, and metrics logged).
+- Code version control (all training code in approved repositories).
+- Reproducibility (ability to recreate any production model from code and data snapshots).
+- Documentation (model cards completed for all Tier 1 and Tier 2 models).
+
+3.4 Model Validation
+Independent validation is required for all Tier 1 models and recommended for Tier 2 models. Validation must cover:
+- Conceptual soundness: Is the modeling approach appropriate for the problem?
+- Data quality: Are training data representative, unbiased, and of sufficient quality?
+- Performance: Does the model meet accuracy, precision, recall, and other KPIs defined in the business case?
+- Fairness: Is the model's performance equitable across protected attribute groups (gender, age, ethnicity, disability)?
+- Robustness: How does the model perform on edge cases, out-of-distribution inputs, and adversarial examples?
+- Explainability: Can individual predictions be explained in terms understandable to a non-technical reviewer?
+
+Validation reports are reviewed by the AI Governance Committee before production approval.
+
+3.5 Deployment
+Production deployment requires sign-off from: the model owner, the validation team (Tier 1), IT Security (for all tiers), and the AI Governance Committee (Tier 1 and Tier 2). A deployment checklist must be completed covering monitoring setup, rollback procedures, performance baselines, and user documentation.
+
+3.6 Monitoring and Performance Management
+All production models must be monitored for:
+- Prediction accuracy vs. ground truth (where available).
+- Data drift: shifts in input feature distributions.
+- Concept drift: shifts in the relationship between inputs and outputs.
+- Fairness metrics: ongoing disparate impact monitoring for Tier 1 models.
+- Volume and error rates: anomalies in prediction volume or error rates trigger alerts.
+
+Monitoring frequency: monthly for Tier 1, quarterly for Tier 2, semi-annually for Tier 3. Models showing performance degradation exceeding 5% from deployment baseline must be escalated for retraining or replacement within 60 days.
+
+3.7 Model Retirement
+When a model is retired, a retirement plan must be approved by the AI Governance Committee. The plan must address: transition to replacement system, data archival, and audit trail preservation. Production models must not be decommissioned without an approved replacement or explicit acceptance of the operational gap.
+
+4. GENERATIVE AI GOVERNANCE
+
+4.1 Additional Requirements for LLMs
+Large language models and other generative AI systems deployed in production face unique risks including hallucination, prompt injection, and misuse. In addition to the standard lifecycle requirements above, LLMs must:
+- Undergo adversarial prompt testing (including jailbreak attempts) before deployment.
+- Have system prompts reviewed and approved by Legal and Compliance.
+- Include output filtering to detect and block harmful, discriminatory, or confidential content.
+- Log all inputs and outputs for Tier 1 and Tier 2 use cases (with appropriate privacy controls).
+- Display clear AI disclosure to users where the output will be presented as-is.
+
+4.2 Retrieval-Augmented Generation (RAG) Systems
+RAG systems must document their retrieval corpus, including data classification, ownership, and update frequency. The retrieval index must exclude Level 4 data unless the RAG system itself is restricted to users authorized for that data. Hallucination rate must be measured against a golden dataset quarterly. Source attribution must be provided with all retrieved answers.
+
+4.3 Human-in-the-Loop Requirements
+For Tier 1 AI systems, human review is mandatory before acting on model outputs in the following scenarios:
+- Credit decisions above a defined threshold.
+- Fraud case closures resulting in account action.
+- Customer communications generated entirely by AI.
+- Regulatory submissions supported by AI analysis.
+
+5. FAIRNESS AND ETHICS
+
+5.1 Prohibited Uses of AI
+The following uses of AI are prohibited at Acme:
+- Automated decision-making that discriminates on the basis of protected characteristics without a lawful exception.
+- Surveillance of employees beyond what is disclosed in employment contracts and legally permitted.
+- Social scoring systems that aggregate personal data to assess individuals in ways unrelated to the service being provided.
+- Generating synthetic media (deepfakes) of individuals without consent.
+- Weaponizing AI for offensive cybersecurity operations.
+
+5.2 Fairness Metrics
+Tier 1 models must be evaluated using at least two fairness metrics appropriate for the use case. Common metrics include demographic parity, equalized odds, and individual fairness. Fairness evaluation results must be documented in the model card and disclosed to regulators upon request.
+
+5.3 Ethics Review
+Any AI project raising novel ethical concerns not addressed by this framework must be escalated to the AI Ethics Review Board, a sub-committee of the AI Governance Committee that includes external independent members.
+
+6. AI INCIDENT MANAGEMENT
+
+AI-related incidents (model failures, unexpected outputs, fairness violations, security breaches involving AI systems) must be reported to the AI Governance Committee within 24 hours of discovery. Major AI incidents affecting customers or regulatory compliance must be escalated to the CISO and Chief Risk Officer simultaneously. A root cause analysis must be completed within 30 days of any major AI incident.
+
+7. ROLES AND RESPONSIBILITIES
+
+- AI Governance Committee: Policy ownership, production approvals, incident oversight.
+- Model Owner: Accountable for model performance and compliance throughout its lifecycle.
+- Data Scientist / ML Engineer: Responsible for model development, documentation, and monitoring.
+- Model Validator: Provides independent validation for Tier 1 models.
+- IT Security: Reviews security posture of AI systems.
+- Legal and Compliance: Reviews regulatory implications and approves system prompts for LLMs.
+- Chief Data Officer: Approves training data for Tier 1 models.
+
+Contact: ai-governance@acmefinancial.example.com

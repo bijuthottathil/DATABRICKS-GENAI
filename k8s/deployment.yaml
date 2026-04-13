@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gradio-app
+  labels:
+    app: gradio-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gradio-app
+  template:
+    metadata:
+      labels:
+        app: gradio-app
+    spec:
+      containers:
+        - name: gradio-app
+          image: gradio-app:latest
+          imagePullPolicy: Never        # use local minikube image, not Docker Hub
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABRICKS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: databricks-creds
+                  key: host
+            - name: DATABRICKS_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: databricks-creds
+                  key: token
+            - name: SERVING_ENDPOINT
+              value: "rag-qa-endpoint"
+          readinessProbe:
+            tcpSocket:
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gradio-app
+spec:
+  type: NodePort
+  selector:
+    app: gradio-app
+  ports:
+    - port: 8000
+      targetPort: 8000
+      nodePort: 30800

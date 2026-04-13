@@ -1,0 +1,72 @@
+COMPLIANCE REQUIREMENTS — 2024 ANNUAL UPDATE
+Organization: Acme Financial Services
+Effective Date: January 1, 2024
+Document Owner: Chief Compliance Officer
+
+1. OVERVIEW
+
+This document outlines the mandatory compliance requirements applicable to all business units of Acme Financial Services for the fiscal year 2024. All employees, contractors, and third-party vendors operating under Acme's authority are required to adhere to these requirements. Non-compliance may result in disciplinary action, contract termination, or regulatory reporting.
+
+2. DATA PRIVACY AND PROTECTION
+
+2.1 General Data Protection Regulation (GDPR)
+All personal data belonging to EU/EEA residents must be processed in accordance with GDPR. This includes obtaining explicit consent before collecting personal data, maintaining accurate records of data processing activities, and appointing a Data Protection Officer (DPO) for high-risk processing operations. Data subjects have the right to access, rectify, erase, and port their personal data. Requests from data subjects must be fulfilled within 30 days of receipt.
+
+2.2 California Consumer Privacy Act (CCPA) / CPRA
+Acme must provide California residents with notice of data collection at or before the point of collection. Consumers have the right to opt out of the sale or sharing of their personal information. A "Do Not Sell or Share My Personal Information" link must be prominently displayed on all consumer-facing digital properties. Annual data inventories are required to track personal information collected, used, and disclosed.
+
+2.3 Data Retention
+Personal data must not be retained longer than necessary for its stated purpose. Retention schedules must be documented and reviewed annually. Data classified as "sensitive" — including financial records, health information, and government-issued identifiers — must be purged or anonymized within 7 years of the end of the business relationship, unless legal holds apply.
+
+3. FINANCIAL REGULATIONS
+
+3.1 Anti-Money Laundering (AML)
+All client onboarding processes must include Know Your Customer (KYC) verification. Suspicious Activity Reports (SARs) must be filed with FinCEN within 30 days of detecting a suspicious transaction. Staff in client-facing roles must complete AML training annually. Transaction monitoring systems must be reviewed and tuned quarterly.
+
+3.2 Sarbanes-Oxley Act (SOX)
+Internal controls over financial reporting must be documented, tested, and certified by executive management. IT general controls — covering access management, change management, and backup/recovery — are in scope for SOX compliance. Any material weaknesses identified during internal or external audit must be remediated within 90 days.
+
+3.3 Payment Card Industry Data Security Standard (PCI DSS)
+All systems that store, process, or transmit cardholder data must comply with PCI DSS v4.0, which became mandatory in March 2024. Key requirements include network segmentation, strong cryptography for data in transit and at rest, quarterly vulnerability scans, and annual penetration testing. A Qualified Security Assessor (QSA) must validate compliance annually.
+
+4. CYBERSECURITY REQUIREMENTS
+
+4.1 Access Management
+Role-based access control (RBAC) must be enforced across all production systems. Privileged access must be managed through a Privileged Access Management (PAM) solution. Multi-factor authentication (MFA) is mandatory for all remote access, administrative accounts, and customer-facing portals. Access reviews must be conducted quarterly for privileged accounts and semi-annually for standard accounts.
+
+4.2 Incident Response
+A documented Incident Response Plan (IRP) must be maintained and tested at least once per year through a tabletop exercise or live simulation. Security incidents that result in unauthorized access to personal data must be reported to affected individuals within 72 hours and to relevant regulators within the timeframes specified by applicable law. A post-incident review must be completed within 30 days of each significant incident.
+
+4.3 Vendor Risk Management
+All third-party vendors with access to Acme systems or data must complete a security risk assessment before onboarding. Annual reassessments are required for vendors classified as "high risk." Contracts with vendors must include data processing agreements that specify data handling obligations, breach notification requirements, and audit rights.
+
+5. AI AND ALGORITHMIC SYSTEMS
+
+5.1 Model Risk Management
+Any AI or machine learning model used to make or influence decisions affecting customers — including credit scoring, fraud detection, and product recommendations — must follow the Model Risk Management (MRM) policy. This includes documented model validation by an independent team before production deployment and annual performance monitoring reviews.
+
+5.2 Explainability and Fairness
+Customer-facing AI models must be capable of providing human-readable explanations for individual decisions upon request. Models must be tested for disparate impact across protected classes (race, gender, age, disability) before deployment and after each significant update. Results of fairness testing must be documented and retained for audit purposes.
+
+5.3 Generative AI Usage
+Use of generative AI tools by employees must be governed by the Acceptable Use Policy for AI (AUP-AI). Employees may not input customer personal data, confidential business information, or source code into publicly available generative AI services. All internally deployed generative AI systems must be approved by the AI Governance Committee and the CISO before production use.
+
+6. TRAINING AND AWARENESS
+
+All employees must complete the following mandatory training annually:
+- Information Security Awareness Training (minimum 2 hours)
+- AML and KYC Refresher (minimum 1 hour, client-facing staff only)
+- Data Privacy Training (minimum 1 hour)
+- Code of Conduct and Ethics (minimum 30 minutes)
+
+Completion rates are tracked by Human Resources and reported to the Compliance Committee quarterly. Employees who fail to complete mandatory training within the stipulated deadline are subject to escalation to their manager and, if unresolved, to HR.
+
+7. COMPLIANCE MONITORING AND REPORTING
+
+The Compliance Department conducts monthly reviews of key compliance indicators (KCIs) and reports findings to the Compliance Committee. Any breach of this policy must be reported to the Compliance Department within 24 hours of discovery. The annual Compliance Report is submitted to the Board of Directors each March and covers the previous calendar year's performance against all compliance obligations.
+
+8. POLICY GOVERNANCE
+
+This document is reviewed and updated annually by the Chief Compliance Officer in consultation with Legal, IT, and business unit leaders. Approved revisions are communicated to all staff via the internal compliance portal within 10 business days of approval.
+
+For questions, contact: compliance@acmefinancial.example.com

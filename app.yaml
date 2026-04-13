@@ -1,0 +1,8 @@
+command: ["python", "app.py"]
+
+env:
+  # DATABRICKS_HOST and DATABRICKS_TOKEN are injected automatically
+  # by the Databricks Apps runtime — no need to set them manually.
+  # Add any optional overrides below if needed.
+  - name: SERVING_ENDPOINT
+    value: "rag-qa-endpoint"

@@ -1,0 +1,45 @@
+# Databricks Workflow — schedules ingestion + index sync automatically
+# Import this via: Databricks UI > Workflows > Create Job > Import YAML
+# or via Databricks CLI: databricks jobs create --json @05_workflow_config.yml
+
+name: rag-doc-pipeline
+
+# Run every hour — adjust to match how often new documents arrive
+schedule:
+  quartz_cron_expression: "0 0 * * * ?"
+  timezone_id: "UTC"
+  pause_status: UNPAUSED
+
+tasks:
+  - task_key: ingest_documents
+    description: "Auto Loader — ingest new documents from cloud storage into Delta"
+    notebook_task:
+      notebook_path: /Workspace/rag_demo/01_ingest_documents
+      source: WORKSPACE
+    job_cluster_key: shared_cluster
+    timeout_seconds: 1800
+
+  - task_key: sync_vector_index
+    description: "Trigger Vector Search re-embedding for newly ingested chunks"
+    depends_on:
+      - task_key: ingest_documents
+    notebook_task:
+      notebook_path: /Workspace/rag_demo/02_setup_vector_search
+      source: WORKSPACE
+    job_cluster_key: shared_cluster
+    timeout_seconds: 1800
+
+# Smallest cluster to minimize cost — serverless is even cheaper if available
+job_clusters:
+  - job_cluster_key: shared_cluster
+    new_cluster:
+      spark_version: "15.4.x-scala2.12"
+      node_type_id: "m5d.large"       # single node, cheapest option
+      num_workers: 0                   # single-node mode
+      spark_conf:
+        spark.master: "local[*, 4]"
+      data_security_mode: SINGLE_USER
+
+email_notifications:
+  on_failure:
+    - your-email@example.com          # alert only on failure, not on success
