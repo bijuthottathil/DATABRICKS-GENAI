@@ -10,6 +10,16 @@ My latest post walks through building a production-ready RAG system end to end: 
 
 The idea is straightforward: use what Databricks gives you for free (BGE embeddings, Foundation Models, Vector Search, MLflow) and focus your energy on the parts that actually matter — chunk quality, grounded prompts, and handling cold-start latency gracefully.
 
+Tech stack:
+- Databricks Free Edition (Unity Catalog, Auto Loader, Vector Search, Model Serving)
+- Meta Llama 3.3 70B Instruct — via Databricks Foundation Models
+- BGE-Large-EN embeddings — built-in, no external API key needed
+- LangChain — RAG chain orchestration
+- MLflow + Unity Catalog — model versioning and registry
+- Gradio — chat UI
+- Databricks Apps — managed app deployment inside the workspace
+- Docker + Kubernetes (Minikube) — portable deployment outside Databricks
+
 The Kubernetes path is a good complement if you need to run the UI outside Databricks — same app.py, same endpoint, different runtime. The post covers the Dockerfile, the Kubernetes manifests, and the design decisions that took the most debugging to get right.
 
 If you are building with the Databricks Free Edition and want a concrete RAG project to get started with, this is a good place to begin. Full post here: [Link to article]
